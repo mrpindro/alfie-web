@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        />
+        <link rel="stylesheet" href="css/style.css">
+        <title>BLOG</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.html" class="">Alfie Nze</a></div>
+            <nav class="header-nav">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="bio.html" class="nav-link">BIO</a></li>
+                    <li class="nav-li"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li class="nav-li"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+                    <li class="nav-li"><a href="performances.html" class="nav-link">PERFORMANCES</a></li>
+                    <li class="nav-li"><a href="career.html" class="nav-link">CAREER</a></li>
+                    <li class="nav-li"><a href="blog.html" class="nav-link active">BLOG</a></li>
+                </ul>
+
+            </nav>
+            <div class="toggle">
+                <div class="toggle1"></div>
+            </div>
+
+            <div class="nav-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+            <section class="container" id="blog">
+                <div class="blog-con">
+                    <h2>BLOG</h2>
+
+                    <div class="blog-img-list">
+                        <div class="blogs-list">
+                            <a href="https://www.mymovies.it/film/2015/devilcomestokoko/" target="_blank">
+                                <div class="blog-img">
+                                    <h1>Igbo Communion</h1>
+                                    <img src="img/igbo-comunion.JPG" alt="">
+                                </div>
+                                <p>
+                                    <span>A TRIP DOWN MEMORY LANE.</span> <br>
+                                    <br>
+                                    An imaginative journey in a land that is too rich, 
+                                    always prey to violent conquests....
+                                </p>
+                            </a>
+                            <a href="https://www.mymovies.it/film/2015/devilcomestokoko/" target="_blank">
+                                <div class="blog-img">
+                                    <h1>Devil comes to koko</h1>
+                                    <img src="img/work1.JPG" alt="">
+                                </div>
+                                <p>
+                                    <span>A TRIP DOWN MEMORY LANE.</span> <br>
+                                    <br>
+                                    An imaginative journey in a land that is too rich, 
+                                    always prey to violent conquests.....
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="logo">Alfie Nze</div>
+
+                <div class="footer-con">
+                    <nav class="footer-nav">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </nav>
+                    <div class="copyright">
+                        <p>Copyright © 2023 Alfie Nze | All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script>
+            const toggle = document.querySelector('.toggle');
+            const toggleBtn = document.querySelector('.toggle1');
+
+            toggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                toggleBtn.classList.toggle('toggle-btn');
+            })
+
+            // Navigation visibility 
+            const navBar = document.querySelector('.nav-bar');
+            const navBarIcon = document.querySelector('.fa-bars');
+            const navBarIcon1 = document.querySelector('.fa-xmark');
+            const navigations = document.querySelector('.nav-ul');
+
+
+            navBar.onclick = function() {
+                navigations.classList.toggle('nav-ul-visible') ? 
+                navBarIcon.className = 'fa-solid fa-xmark' :
+                navBarIcon.className = 'fa-solid fa-bars';  
+            }
+        </script>
+    </body>
+</html>

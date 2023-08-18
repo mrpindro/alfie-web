@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        />
+        <link rel="stylesheet" href="css/style.css">
+        <title>Devil Comes To Koko</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.html" class="">Alfie Nze</a></div>
+            <nav class="header-nav">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="bio.html" class="nav-link">BIO</a></li>
+                    <li class="nav-li"><a href="projects.html" class="nav-link active">PROJECTS</a></li>
+                    <li class="nav-li"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+                    <li class="nav-li"><a href="performances.html" class="nav-link">PERFORMANCES</a></li>
+                    <li class="nav-li"><a href="career.html" class="nav-link">CAREER</a></li>
+                    <li class="nav-li"><a href="blog.html" class="nav-link">BLOG</a></li>
+                </ul>
+            </nav>
+
+            <div class="toggle">
+                <div class="toggle1"></div>
+            </div>
+
+            <div class="nav-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+            <section class="container active" id="devil-comes">
+                <div class="dev-con">
+                    <div class="dev-comes">
+                        <div class="dev-comes-img">
+                            <div class="dev-text">
+                                <h1>A TRIP DOWN MEMORY LANE.</h1>
+                                <span>Devil Comes To Koko</span>
+                                <p>
+                                    An imaginative journey in a land that is too rich, 
+                                    always prey to violent conquests. It is the journey 
+                                    through the historical memory of Alfie Nze, a Nigerian 
+                                    theater director who moved to Italy in the nineties who 
+                                    tells us about two brutal episodes that took place in Nigeria: 
+                                    the bloody British invasion of Benin City in 1897 and the scandal 
+                                    of toxic waste dumped in 1987 in Koko, a village in the Niger Delta.
+                                </p>
+                            </div>
+                            <div class="dev-img">
+                                <img src="img/work1.JPG" alt="">
+                            </div>
+                        </div>
+                        <div class="dev-comes-vid">
+                            <iframe src="https://www.youtube.com/embed/qAQDPriEdvg"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <footer>
+                <div class="logo">Alfie Nze</div>
+
+                <div class="footer-con">
+                    <nav class="footer-nav">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </nav>
+                    <div class="copyright">
+                        <p>Copyright © 2023 Alfie Nze | All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script>
+            const toggle = document.querySelector('.toggle');
+            const toggleBtn = document.querySelector('.toggle1');
+
+            toggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                toggleBtn.classList.toggle('toggle-btn');
+            })
+
+
+            // Navigation visibility 
+            const navBar = document.querySelector('.nav-bar');
+            const navBarIcon = document.querySelector('.fa-bars');
+            const navBarIcon1 = document.querySelector('.fa-xmark');
+            const navigations = document.querySelector('.nav-ul');
+
+
+            navBar.onclick = function() {
+                navigations.classList.toggle('nav-ul-visible') ? 
+                navBarIcon.className = 'fa-solid fa-xmark' :
+                navBarIcon.className = 'fa-solid fa-bars';  
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        />
+        <link rel="stylesheet" href="css/style.css">
+        <title>GALLERY</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.html" class="">Alfie Nze</a></div>
+            <nav class="header-nav">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="bio.html" class="nav-link">BIO</a></li>
+                    <li class="nav-li"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li class="nav-li"><a href="gallery.html" class="nav-link active">GALLERY</a></li>
+                    <li class="nav-li"><a href="performances.html" class="nav-link">PERFORMANCES</a></li>
+                    <li class="nav-li"><a href="career.html" class="nav-link">CAREER</a></li>
+                    <li class="nav-li"><a href="blog.html" class="nav-link">BLOG</a></li>
+                </ul>
+            </nav>
+
+            <div class="toggle">
+                <div class="toggle1"></div>
+            </div>
+
+            <div class="nav-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+            <section class="container" id="gallery">
+                <div class="gallery-con">
+                    <img class="gal-img" src="img/work1.JPG" alt="">
+                    <img class="gal-img" src="img/igbo-comunion.JPG" alt="">
+                    <img class="gal-img" src="img/work1.JPG" alt="">
+                    <img class="gal-img" src="img/igbo-comunion.JPG" alt="">
+                    <img class="gal-img" src="img/work1.JPG" alt="">
+                    <img class="gal-img" src="img/igbo-comunion.JPG" alt="">
+                    <img class="gal-img" src="img/work1.JPG" alt="">
+                    <img class="gal-img" src="img/igbo-comunion.JPG" alt="">
+                    <img class="gal-img" src="img/work1.JPG" alt="">
+                    <img class="gal-img" src="img/igbo-comunion.JPG" alt="">
+                    <img class="gal-img" src="img/work1.JPG" alt="">
+                    <img class="gal-img" src="img/igbo-comunion.JPG" alt="">                  
+                </div>
+                <div class="big-img-con">
+                    <i class="fa-solid fa-xmark" id="close-big-img"></i>
+                    <i class="fa-solid fa-angle-right" id="next-img"></i>
+                    <i class="fa-solid fa-angle-left" id="prev-img"></i>
+                    <img src="img/work1.JPG" alt="" class="big-img">
+                </div>
+            </section>
+            <footer>
+                <div class="logo">Alfie Nze</div>
+
+                <div class="footer-con">
+                    <nav class="footer-nav">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </nav>
+                    <div class="copyright">
+                        <p>Copyright © 2023 Alfie Nze | All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <script>
+                // Gallery Page 
+                const galImg = document.querySelectorAll('.gal-img');
+                const bigImg = document.querySelector('.big-img');
+                const closeBigImg = document.getElementById('close-big-img');
+                const nextImg = document.getElementById('next-img');
+                const prevImg = document.getElementById('prev-img');
+                const bigImgCon = document.querySelector('.big-img-con');
+
+                galImg.forEach(img => {
+                    img.addEventListener('click', function() {
+                        bigImg.src = img.src;
+                        bigImgCon.style.display = 'flex';
+                    })
+                })
+
+                closeBigImg.addEventListener('click', () => {
+                    bigImgCon.style.display = 'none';
+                })
+
+                nextImg.onclick = function() {
+                    if (bigImg.src === galImg[0].src) {
+                        bigImg.src = galImg[1].src
+                    } 
+                    else if (bigImg.src === galImg[1].src) {
+                        bigImg.src = galImg[2].src
+                    } 
+                }
+
+                prevImg.onclick = function() {
+                    if (bigImg.src === galImg[1].src) {
+                        bigImg.src = galImg[0].src
+                    } 
+                    else if (bigImg.src === galImg[2].src) {
+                        bigImg.src = galImg[1].src
+                    } 
+                }
+
+
+                const toggle = document.querySelector('.toggle');
+                const toggleBtn = document.querySelector('.toggle1');
+
+                toggle.addEventListener('click', () => {
+                    document.body.classList.toggle('light-mode');
+                    toggleBtn.classList.toggle('toggle-btn');
+                })
+
+
+            // Navigation visibility 
+            const navBar = document.querySelector('.nav-bar');
+            const navBarIcon = document.querySelector('.fa-bars');
+            const navBarIcon1 = document.querySelector('.fa-xmark');
+            const navigations = document.querySelector('.nav-ul');
+
+
+            navBar.onclick = function() {
+                navigations.classList.toggle('nav-ul-visible') ? 
+                navBarIcon.className = 'fa-solid fa-xmark' :
+                navBarIcon.className = 'fa-solid fa-bars';  
+            }
+
+            </script>
+        </main>
+    </body>
+</html>

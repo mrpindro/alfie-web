@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        />
+        <link rel="stylesheet" href="css/style.css">
+        <title>CAREER</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.html" class="">Alfie Nze</a></div>
+            <nav class="header-nav">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="bio.html" class="nav-link">BIO</a></li>
+                    <li class="nav-li"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li class="nav-li"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+                    <li class="nav-li"><a href="performances.html" class="nav-link">PERFORMANCES</a></li>
+                    <li class="nav-li"><a href="career.html" class="nav-link active">CAREER</a></li>
+                    <li class="nav-li"><a href="blog.html" class="nav-link">BLOG</a></li>
+                </ul>
+
+            </nav>
+            <div class="toggle">
+                <div class="toggle1"></div>
+            </div>
+
+            <div class="nav-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+            <section class="container" id="career">
+                <div class="career-con">
+                    <h2>CAREER</h2>
+                    <div class="career-synop">
+                        <p>
+                            Lorem ipsum dolor sit, 
+                            amet consectetur adipisicing elit.
+                            Totam atque, vitae perferendis suscipit 
+                            voluptas cupiditate natus excepturi quibusdam 
+                            alias iusto in eius praesentium voluptatum soluta? 
+                            Rerum eveniet expedita quia voluptate!
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipisicing elit.
+                            Praesentium tempore corporis earum sunt animi 
+                            repellat distinctio esse, saepe officiis! Suscipit 
+                            nostrum repudiandae animi esse deserunt molestias 
+                            neque tempore eos omnis!
+                        </p>
+                        <img src="img/alfie-nze.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="logo">Alfie Nze</div>
+
+                <div class="footer-con">
+                    <nav class="footer-nav">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </nav>
+                    <div class="copyright">
+                        <p>Copyright © 2023 Alfie Nze | All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script>
+            const toggle = document.querySelector('.toggle');
+            const toggleBtn = document.querySelector('.toggle1');
+
+            toggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                toggleBtn.classList.toggle('toggle-btn');
+            })
+
+            // Navigation visibility 
+            const navBar = document.querySelector('.nav-bar');
+            const navBarIcon = document.querySelector('.fa-bars');
+            const navBarIcon1 = document.querySelector('.fa-xmark');
+            const navigations = document.querySelector('.nav-ul');
+
+
+            navBar.onclick = function() {
+                navigations.classList.toggle('nav-ul-visible') ? 
+                navBarIcon.className = 'fa-solid fa-xmark' :
+                navBarIcon.className = 'fa-solid fa-bars';  
+            }
+        </script>
+    </body>
+</html>
